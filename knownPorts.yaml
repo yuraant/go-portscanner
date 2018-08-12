@@ -1,0 +1,23 @@
+--- 
+services: 
+  - 
+    description: http
+    port: 80
+  - 
+    description: https
+    port: 443
+  -
+    description: SSH
+    port: 22
+  -
+    description: FTP
+    port: 21
+  -
+    description: Telnet
+    port: 23
+  -
+    description: SMTP
+    port: 25
+  -
+    description: NTP
+    port: 123

@@ -3,18 +3,18 @@ Console port scanner with flags as configuration.
 
 ## Prerequisites for building app
 The application uses gopkg.in/yaml.v2 library to manage yaml files. Which use as configuration and store for inventory.
-You need to install this library before you bild app
+You need to install this library before you build app
 ```
 go get gopkg.in/yaml.v2
 ```
-Another part of app is based on standard Golang libraries.
+Another part of application is based on standard Golang libraries.
 Build example:
 ```
 # cd [path to app folder]
 # go build
 ```
 ## Configuration 
-Application has configuration file for known ports [knownPorts.yaml](https://github.com/yuraant/go-portscanner/blob/master/knownPorts.yaml). There is list off related services to ports. You can add ports to this list in accordance with the structure of file. These descritions for ports will be shown when application finds such open ports.
+Application has configuration file for known ports [knownPorts.yaml](https://github.com/yuraant/go-portscanner/blob/master/knownPorts.yaml). There is list of related services to ports. You can add ports to this list in accordance with the structure of file. These descriptions for ports will be shown when application finds such open ports.
 ````
 #host:go-portscanner$ ./go-portscanner -target 192.168.1.70
 Scan target is: 192.168.1.70, Timout is: 1, We use 5 threads, First port is: 20, Last port is 65536
@@ -30,7 +30,7 @@ scanning ports 20-65536 on host 192.168.1.70...
  5000 [open]  -->   UNKNOWN
  5001 [open]  -->   UNKNOWN
 ````
-The application has own help for arguments. You can run app with flag -h or -help to show default values and arguments.
+The application has own help for arguments. You can run application with flag -h or -help to show default values and arguments.
 ````
 #host:go-portscanner$ ./go-portscanner -h
 Usage of ./go-portscanner:

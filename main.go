@@ -190,7 +190,7 @@ func (h PortScanner) IsOpen(port int) bool {
 	return true
 }
 
-//GetOpenedPort
+//GetOpenedPort work with range of ports
 func (h PortScanner) GetOpenedPort(portStart int, portEnds int) []int {
 	rv := []int{}
 	l := sync.Mutex{}

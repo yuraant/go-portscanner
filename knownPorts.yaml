@@ -21,3 +21,6 @@ services:
   -
     description: NTP
     port: 123
+  -
+    description: SMB
+    port: 445

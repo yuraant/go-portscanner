@@ -55,12 +55,11 @@ func init() {
 }
 
 func main() {
-	flag.StringVar(&cidr, "target", "127.0.0.1", "/ IP address or CIDR or hostname")
-	//	Net = flag.String("net", "127.0.0.1/32", "a string / network range")
-	flag.IntVar(&scanTimeout, "timeout", 1, "/ time in seconds")
-	flag.IntVar(&scanThreads, "threads", 5, "/ parallel connections")
-	flag.IntVar(&portStart, "portstart", 20, "/ first port of scanning")
-	flag.IntVar(&portEnd, "portend", 65536, "/ last port of scanning")
+	flag.StringVar(&cidr, "target", "127.0.0.1", "/ Single IP address or CIDR or hostname")
+	flag.IntVar(&scanTimeout, "timeout", 1, "/ Time in seconds")
+	flag.IntVar(&scanThreads, "threads", 5, "/ Parallel connections")
+	flag.IntVar(&portStart, "portstart", 20, "/ First port of scanning")
+	flag.IntVar(&portEnd, "portend", 65536, "/ Last port of scanning")
 	flag.Parse()
 
 	fmt.Printf("Scan target is: %s, Timout is: %d, We use %d threads, First port is: %d, Last port is %d\n\n", cidr, scanTimeout, scanThreads, portStart, portEnd)
@@ -80,10 +79,10 @@ func main() {
 		}
 
 		hostsRange = append(hostsRange, ipaddr.String())
-		fmt.Printf("You used Hostname. The target ip is: %s\n", hostsRange)
+		fmt.Printf("You used Hostname. The target IP is: %s\n", hostsRange)
 	default:
 		hostsRange = append(hostsRange, cidr)
-		fmt.Printf("You used single IP. The target ip is: %s\n", hostsRange)
+		fmt.Printf("You used single IP. The target IP is: %s\n", hostsRange)
 	}
 
 	for _, host := range hostsRange {

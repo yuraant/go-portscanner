@@ -141,7 +141,7 @@ func isLetter(s string) bool {
 	return false
 }
 
-func scanHost(host string, timeout int, threads int, portfirst int, portlast int) tempInventory {
+func scanHost(host string, timeout, threads, portfirst, portlast int) tempInventory {
 	ps := NewPortScanner(host, time.Duration(timeout)*time.Second, threads)
 	fmt.Printf("scanning ports %d-%d on host %s...\n\n", portStart, portEnd, host)
 
